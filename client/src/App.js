@@ -6,7 +6,6 @@ function App() {
   let [hitMovies, setHitMovies] = useState([]);
 
   let getHitMoviesList = async () => {
-    console.log("env=", process.env);
     let response = await axios.get("/hitMovies");
     setHitMovies(response.data);
   };

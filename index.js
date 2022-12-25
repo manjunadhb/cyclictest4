@@ -9,6 +9,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, "./client/build")));
 
 app.get("/hitMovies", (req, res) => {
+  console.log("env=", process.env);
   res.json(["Kantara", "Major", "Sitaramam", "Karthikeya 2"]);
 });
 
