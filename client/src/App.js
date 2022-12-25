@@ -6,6 +6,7 @@ function App() {
   let [hitMovies, setHitMovies] = useState([]);
 
   let getHitMoviesList = async () => {
+    console.log("env=", process.env);
     console.log(process.env.REACT_APP_PATH);
     console.log(process.env.NODE_ENV);
     let response = await axios.get(`${process.env.REACT_APP_PATH}/hitMovies`);
@@ -14,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Version 4.2</h1>
+      <h1>Version 4.3</h1>
       <button
         onClick={() => {
           getHitMoviesList();
