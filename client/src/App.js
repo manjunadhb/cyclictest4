@@ -7,13 +7,13 @@ function App() {
 
   let getHitMoviesList = async () => {
     console.log("env=", process.env);
-    let response = await axios.get("/hitMovies");
+    let response = await axios.get("/movies/hitMovies");
     setHitMovies(response.data);
   };
 
   return (
     <div className="App">
-      <h1>Version 4.3</h1>
+      <h1>Version 4.4</h1>
       <button
         onClick={() => {
           getHitMoviesList();
