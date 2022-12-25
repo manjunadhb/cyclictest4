@@ -12,7 +12,7 @@ app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-app.get("/hitMovies", (req, res) => {
+app.get("/movies/hitMovies", (req, res) => {
   res.json(["Kantara", "Major", "Sitaramam", "Karthikeya 2"]);
 });
 
