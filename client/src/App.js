@@ -7,8 +7,6 @@ function App() {
 
   let getHitMoviesList = async () => {
     console.log("env=", process.env);
-    console.log(process.env.REACT_APP_PATH);
-    console.log(process.env.NODE_ENV);
     let response = await axios.get(`${process.env.REACT_APP_PATH}/hitMovies`);
     setHitMovies(response.data);
   };
