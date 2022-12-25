@@ -6,7 +6,7 @@ dotenv.config();
 const app = express();
 let PORT = process.env.PORT || 3434;
 app.use(cors());
-app.use(express.static(path.join(__dirname, "./client/build")));
+// app.use(express.static(path.join(__dirname, "./client/build")));
 
 app.get("/hitMovies", (req, res) => {
   res.json(["Kantara", "Major", "Sitaramam", "Karthikeya 2"]);
