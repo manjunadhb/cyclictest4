@@ -6,10 +6,9 @@ function App() {
   let [hitMovies, setHitMovies] = useState([]);
 
   let getHitMoviesList = async () => {
-    let response = await axios.get(
-      "https://poised-pantyhose-crab.cyclic.app/hitMovies"
-    );
-
+    console.log(process.env.REACT_APP_PATH);
+    console.log(process.env.NODE_ENV);
+    let response = await axios.get(`${process.env.REACT_APP_PATH}/hitMovies`);
     setHitMovies(response.data);
   };
 
