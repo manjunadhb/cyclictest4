@@ -8,11 +8,7 @@ let PORT = process.env.PORT || 3434;
 app.use(cors());
 app.use(express.static(path.join(__dirname, "./client/build")));
 
-// app.get("*", function (req, res) {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
-
-app.get("/movies/hitMovies", (req, res) => {
+app.get("/hitMovies", (req, res) => {
   res.json(["Kantara", "Major", "Sitaramam", "Karthikeya 2"]);
 });
 
