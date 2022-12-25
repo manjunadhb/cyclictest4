@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Version 4.1</h1>
+      <h1>Version 4.2</h1>
       <button
         onClick={() => {
           getHitMoviesList();
