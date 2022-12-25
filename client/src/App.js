@@ -6,7 +6,9 @@ function App() {
   let [hitMovies, setHitMovies] = useState([]);
 
   let getHitMoviesList = async () => {
-    let response = await axios.get("http://localhost:3434/hitMovies");
+    let response = await axios.get(
+      "https://poised-pantyhose-crab.cyclic.app/hitMovies"
+    );
 
     setHitMovies(response.data);
   };
